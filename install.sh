@@ -31,7 +31,7 @@ echo "开始添加计划任务..."
 if grep -qF "$SCRIPT_PATH" /etc/crontabs/root; then
     echo "已经存在相同的计划任务，跳过计划任务添加步骤。"
 else
-    echo "添加计划任务，默认更新时间为每天4:30..."
+    echo "添加计划任务，默认更新时间为每周二4:30..."
     echo "$CRON_TIME $SCRIPT_PATH" >> /etc/crontabs/root
 fi
 
