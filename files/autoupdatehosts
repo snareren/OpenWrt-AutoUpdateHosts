@@ -15,16 +15,16 @@ curl https://mirror.ghproxy.com/https://raw.githubusercontent.com/TG-Twilight/AW
     sed '/127.0.0.1 localhost/d; /::1 localhost/d; 1s/^/# AWAvenue-Ads-Rule Start\n/; $s/$/\n# AWAvenue-Ads-Rule End/' >> /etc/hosts
 
 # 删除空行
-echo "删除空行..."
-sed -i '/^$/d' /etc/hosts
+#echo "删除空行..."
+#sed -i '/^$/d' /etc/hosts
 
 # 删除之前的 GitHub520 Host 条目
-echo "删除之前的 GitHub520 Host 条目..."
-sed -i '/# GitHub520 Host Start/,/# GitHub520 Host End/d' /etc/hosts
+#echo "删除之前的 GitHub520 Host 条目..."
+#sed -i '/# GitHub520 Host Start/,/# GitHub520 Host End/d' /etc/hosts
 
 # 下载 GitHub520 Host 的 hosts 文件
-echo "下载并合并 GitHub520 Host 的 hosts 文件..."
-curl https://raw.hellogithub.com/hosts >> /etc/hosts
+#echo "下载并合并 GitHub520 Host 的 hosts 文件..."
+#curl https://raw.hellogithub.com/hosts >> /etc/hosts
 
 # 删除空行和以 < 开头的行
 echo "删除空行和以 < 开头的行..."
