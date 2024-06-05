@@ -1,3 +1,6 @@
+## Fork from  
+- [Aethersailor/OpenWrt-AutoUpdateHosts](https://github.com/Aethersailor/OpenWrt-AutoUpdateHosts)
+
 # OpenWrt-AutoUpdateHosts  
 
 ## 脚本功能
