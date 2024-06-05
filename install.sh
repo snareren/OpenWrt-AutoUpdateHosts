@@ -6,8 +6,8 @@
 SCRIPT_URL="https://mirror.ghproxy.com/https://raw.githubusercontent.com/Aethersailor/OpenWrt-AutoUpdateHosts/main/files/autoupdatehosts"
 # 定义本地脚本文件的目标路径
 SCRIPT_PATH="/etc/autoupdatehosts"
-# 定义计划任务的时间（每天凌晨4点30分）
-CRON_TIME="30 4 * * *"
+# 定义计划任务的时间（每周二凌晨4点30分）
+CRON_TIME="30 4 * * 2"
 # 定义 dnsmasq 配置文件路径
 DNSMASQ_CONF="/etc/config/dhcp"
 
@@ -38,7 +38,8 @@ fi
 # 提取计划任务的时间，并输出相应提示
 CRON_HOUR=$(echo $CRON_TIME | cut -d' ' -f2)
 CRON_MIN=$(echo $CRON_TIME | cut -d' ' -f1)
-echo "AutoUpdateHosts 脚本安装完成！脚本将在每天的 $CRON_HOUR 点 $CRON_MIN 分运行。"
+CRON_WEEKDAY=$(echo $CRON_TIME | cut -d' ' -f5)
+echo "AutoUpdateHosts 脚本安装完成！脚本将在每周 $CRON_WEEKDAY 的 $CRON_HOUR 点 $CRON_MIN 分运行。"
 
 # 运行脚本文件一次
 echo "运行 AutoUpdateHosts 脚本..."
